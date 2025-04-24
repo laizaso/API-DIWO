@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: pguser
+      POSTGRES_PASSWORD: diwo
+      POSTGRES_DB: diwo
+    ports:
+
+      - "5432:5432"  
+    volumes:
+      - banco-de-dados-projeto-diwo:/var/lib/postgresql/data  
+
+volumes:
+  banco-de-dados-projeto-diwo:  
